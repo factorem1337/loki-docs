@@ -36,7 +36,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../Loki_favicon32x32.png">
-      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.3">
     
     
       
@@ -790,18 +790,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../ServiceNodeFunctions/" title="Service Node Functions" class="md-nav__link">
-      Service Node Functions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../StakingRequirement/" title="Staking Requirement" class="md-nav__link">
       Staking Requirement
     </a>
@@ -841,77 +829,17 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-5" type="checkbox" id="nav-7-5" checked>
     
-    <label class="md-nav__link" for="nav-7-6">
+    <label class="md-nav__link" for="nav-7-5">
       Guides
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-6">
+      <label class="md-nav__title" for="nav-7-5">
         Guides
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../SNFullGuide/" title="Service Node Full Guide" class="md-nav__link">
-      Service Node Full Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../UpdateGuide/" title="Legacy to Launcher Update Guide" class="md-nav__link">
-      Legacy to Launcher Update Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
-      Service Node RPC Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
-      Gui Staking Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../launcherconfig/" title="Launcher Config File" class="md-nav__link">
-      Launcher Config File
-    </a>
-  </li>
-
         
           
           
@@ -928,11 +856,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Installing via Debian Package Guide
+        Service Node Setup Guide
       </label>
     
-    <a href="./" title="Installing via Debian Package Guide" class="md-nav__link md-nav__link--active">
-      Installing via Debian Package Guide
+    <a href="./" title="Service Node Setup Guide" class="md-nav__link md-nav__link--active">
+      Service Node Setup Guide
     </a>
     
       
@@ -1104,6 +1032,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-nav__link">
+      Service Node RPC Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GUIStakingGuide/" title="Gui Staking Guide" class="md-nav__link">
+      Gui Staking Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-nav__link">
       Service Node Legacy Guide
     </a>
@@ -1134,13 +1086,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-7" type="checkbox" id="nav-7-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-6" type="checkbox" id="nav-7-6">
     
-    <label class="md-nav__link" for="nav-7-7">
+    <label class="md-nav__link" for="nav-7-6">
       Troubleshooting
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-7-7">
+      <label class="md-nav__title" for="nav-7-6">
         Troubleshooting
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2426,9 +2378,9 @@ blockchain tools) for Debian and Ubuntu.</p>
 </blockquote>
 <h2 id="express-guide">Express Guide<a class="headerlink" href="#express-guide" title="Permanent link">&para;</a></h2>
 <p>Start a new service node by running these four commands:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+<div class="codehilite"><pre><span></span><code>curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 
-echo &quot;deb https://deb.imaginary.stream $(lsb_release -sc) main&quot; | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+echo &quot;deb https://deb.loki.network $(lsb_release -sc) main&quot; | sudo tee /etc/apt/sources.list.d/loki.list
 
 apt update
 
@@ -2445,7 +2397,7 @@ once, the repository will automatically update whenever you fetch new system upd
 <p>To add the apt repository run the following command, replacing <code>&lt;DISTRO&gt;</code> in the second line with the
 appropriate value (see below).</p>
 <p>The following command installed Jagermans public key used to sign the Binaries.</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
+<div class="codehilite"><pre><span></span><code>curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 </code></pre></div>
 
 
@@ -2461,7 +2413,7 @@ appropriate value (see below).</p>
 <li>eoan     (Ubuntu 19.10)</li>
 <li>focal    (Ubuntu 20.04)</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>echo &quot;deb https://deb.imaginary.stream &lt;DISTRO&gt; main&quot; | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
+<div class="codehilite"><pre><span></span><code>echo &quot;deb https://deb.loki.network &lt;DISTRO&gt; main&quot; | sudo tee /etc/apt/sources.list.d/loki.list
 </code></pre></div>
 
 
@@ -2567,6 +2519,13 @@ restricted-rpc=1
 
 <p>into <code>/etc/loki/loki.conf</code> and then restart lokid using:</p>
 <div class="codehilite"><pre><span></span><code>sudo systemctl restart loki-node
+</code></pre></div>
+
+
+<p>For example, to run lokid as a service node, the <code>loki-service-node</code> helper package will configure loki.conf with these options (you can add them directly if not using the <code>loki-service-node</code> helper package):</p>
+<div class="codehilite"><pre><span></span><code>service-node=1
+service-node-public-ip=1.2.3.4
+storage-server-port=22021
 </code></pre></div>
 
 
@@ -2705,7 +2664,7 @@ node; in order to actually run it you need to activate and start the loki-testne
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../launcherconfig/" title="Launcher Config File" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../InfiniteStakingPrimer/" title="Infinite Staking Primer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2714,19 +2673,19 @@ node; in order to actually run it you need to activate and start the loki-testne
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Launcher Config File
+                Infinite Staking Primer
               </span>
             </div>
           </a>
         
         
-          <a href="../SNFullGuideLegacy/" title="Service Node Legacy Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../Developer/SNRPCGuide/" title="Service Node RPC Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Service Node Legacy Guide
+                Service Node RPC Guide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2773,7 +2732,7 @@ node; in order to actually run it you need to activate and start the loki-testne
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../JAVASCRIPT/links.js"></script>
       
