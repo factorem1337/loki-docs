@@ -2390,13 +2390,13 @@ blockchain tools) for Debian and Ubuntu.</p>
 </blockquote>
 <h2 id="express-guide">Express Guide<a class="headerlink" href="#express-guide" title="Permanent link">&para;</a></h2>
 <p>Start a new service node by running these four commands:</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+<div class="codehilite"><pre><span></span><code>sudo curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 
 echo &quot;deb https://deb.loki.network $(lsb_release -sc) main&quot; | sudo tee /etc/apt/sources.list.d/loki.list
 
-apt update
+sudo apt update
 
-apt install loki-service-node
+sudo apt install loki-service-node
 </code></pre></div>
 
 
@@ -2409,7 +2409,7 @@ once, the repository will automatically update whenever you fetch new system upd
 <p>To add the apt repository run the following command, replacing <code>&lt;DISTRO&gt;</code> in the second line with the
 appropriate value (see below).</p>
 <p>The following command installed Jagermans public key used to sign the Binaries.</p>
-<div class="codehilite"><pre><span></span><code>curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
+<div class="codehilite"><pre><span></span><code>sudo curl -s https://deb.loki.network/public.gpg | sudo apt-key add -
 </code></pre></div>
 
 
