@@ -15,6 +15,12 @@ To turn the vpn on:
 lokinet-vpn --up --exit exitaddressgoeshere.loki --token authcodegoeshere
 ```
 
+Example on a public exit node (hosted by kee):
+
+```bash
+lokinet-vpn --up --exit 9maicx67qabchgwbaqxrp3iyofppfryqtfxbwsegfyjyhapnxiio.loki -- token MASQUERADE
+```
+
 To turn the vpn off:
 
 ```bash
