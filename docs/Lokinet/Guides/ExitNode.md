@@ -21,6 +21,12 @@ To turn the vpn off:
 lokinet-vpn --down
 ```
 
+Example using a public exit node (hosted by kee):
+
+```bash 
+lokinet-vpn --up --exit 9maicx67qabchgwbaqxrp3iyofppfryqtfxbwsegfyjyhapnxiio.loki
+```
+
 
 ## Prequesites
 
